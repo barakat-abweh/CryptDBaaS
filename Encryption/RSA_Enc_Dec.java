@@ -40,7 +40,7 @@ public class RSA_Enc_Dec {
     private String cipherText;
     final private String keyStore="KeyStore.jks";
     final private String keyName="mykey";
-    final private String password="password";
+    final private String password="yourpassword";
     public void setPlainText(String plainText) {
         this.plainText = plainText;
     }
