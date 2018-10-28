@@ -37,7 +37,7 @@ public class AES_Enc_Dec {
     public void encryptAES() {
         try {
             byte[] plainTextBytes = plainText.getBytes();
-            SecretKeySpec secretKeySpec = new SecretKeySpec(Byte_Hex_Transform.hexStringToByteArray("67e14dc17eb9f0c9fe4896467c77922b"), "AES");
+            SecretKeySpec secretKeySpec = new SecretKeySpec(Byte_Hex_Transform.hexStringToByteArray("YOUR_KEY_IN_HEX"), "AES");
             Cipher encAEScipher = Cipher.getInstance("AES");
             encAEScipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
             byte[] cipherTextBytes = encAEScipher.doFinal(plainTextBytes);
@@ -50,7 +50,7 @@ public class AES_Enc_Dec {
     {
         try {
             byte [] cipherBytes =Byte_Hex_Transform.hexStringToByteArray(cipherText);
-            Key aesKey = new SecretKeySpec(Byte_Hex_Transform.hexStringToByteArray("67e14dc17eb9f0c9fe4896467c77922b"), "AES");
+            Key aesKey = new SecretKeySpec(Byte_Hex_Transform.hexStringToByteArray("YOUR_KEY_IN_HEX"), "AES");
             Cipher encAEScipher = Cipher.getInstance("AES");
             encAEScipher.init(Cipher.DECRYPT_MODE, aesKey);
             byte[] plainTextBytes = encAEScipher.doFinal(cipherBytes);
